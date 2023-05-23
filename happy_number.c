@@ -1,26 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n,d,r=0;
-    scanf("%d%d",&n,&d);
-    while(n)
+    int n,s=0,rem;
+    scanf("%d",&n);
+    while(s!=1&&s!=4)
     {
-        d=n%10;
-        n=n/10;
-        r+=d*d;
-        if(n==0 && r>9)
+        s=0;
+        while(n!=0)
         {
-            n=r;
-            r=0;
+            rem=n%10;
+            s+=(rem*rem);
+            n/=10;
         }
+        n=s;
     }
-    if(r==1)
+    if(s==1)
     {
         printf("True");
     }
     else
-    {
-        printf("False");
-    }
-    return 0;
+    printf("False");
 }
