@@ -1,25 +1,35 @@
 #include<stdio.h>
+int dig(int n){
+    int r,k=0;
+    while(n>0)
+    {
+        r=n%10;
+        k++;
+        n=n/10;
+    }
+    return k;
+}
 int main()
 {
-    int n,a[100],d,i=0,j;
+    int n,i;
     scanf("%d",&n);
-    while(n)
+    int k=dig(n);
+    int x[k];
+    for(int i=k-1;i>=0;i--)
     {
-        d=n%10;
+        x[i]=n%10;
         n=n/10;
-        a[i]=d;
-        i++;
     }
-    for(j=i;j>=0;j--)
+    for(i=0;i<k;i++)
     {
-        if(a[j]==6)
+        if(x[i]!=9)
         {
-            a[j]=9;
+            x[i]=9;
             break;
         }
     }
-    for(j=i-1;j>=0;j--)
+    for(int i=0;i<k;i++)
     {
-        printf("%d",a[j]);
+        printf("%d",x[i]);
     }
 }
