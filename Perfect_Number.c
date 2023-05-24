@@ -1,16 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,tc=0;
-    scanf("%d",&n);
-    for(i=1;i<=n/2;i++)
+    int num,n,sum=0,i;
+    scanf("%d",&num);
+    for(i=1;i<num;i++)
     {
-        if(n%i==0)
+        if(num%i==0)
         {
-            tc=tc+i;
+            sum += i;
         }
     }
-    if(tc==n)
+    if(sum == num)
+    
     {
         printf("True");
     }
