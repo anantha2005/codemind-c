@@ -1,20 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int i,l,n,q,r,c=0,tc=0;
-    scanf("%d%d",&l,&n);
-    for(i=l;i<=n;i++)
+    int a,b,q,c=0,tc=0,r;
+    scanf("%d%d",&a,&b);
+    int i,j;
+    for(i=a;i<=b;i++)
     {
         q=i;
         c=0;
         tc=0;
         while(q!=0)
         {
-            c=c+1;
+            c++;
             r=q%10;
-            if(r!=0 && i%r==0)
+            if(r!=0&&i%r==0)
             {
-                tc=tc+1;
+                tc++;
             }
             q=q/10;
         }
