@@ -1,6 +1,5 @@
 #include<stdio.h>
-int main()
-{
+int main(){
     int n,d,x[100],j,i=0,k,c=0,s=0;
     scanf("%d",&n);
     while(n!=0)
@@ -18,10 +17,10 @@ int main()
             {
                 c++;
             }
-        }
     }
-    if(c==i)
-    printf("Unique Number");
-    else
-    printf("Not Unique Number");
+}
+if(c==i)
+printf("Unique Number");
+else
+printf("Not Unique Number");
 }
