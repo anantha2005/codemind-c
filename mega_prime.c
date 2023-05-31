@@ -1,50 +1,38 @@
 #include<stdio.h>
-int fun(int num)
-{
-    int i,fc=0;
-    for(i=1;i<=num;i++)
-	{
-		if(num%i==0)
-		{
-			fc++;	
-		}	
-	}
-	if(fc==2)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
 int main()
 {
-    int n,d,c=0,cc=0,temp;
+    int n,i,t,c=0,d,s=0,l=0;
     scanf("%d",&n);
-    temp=n;
-    if(fun(n))
+    t=n;
+    for(i=1;i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            c++;
+        }
+    }
+    if(c==2)
     {
         while(n)
         {
-            d=n%10;
-            if(fun(d))
+            int k=0;d=n%10;n=n/10;l++;
+            for(i=1;i<=d;i++)
             {
-                cc++;
+                if(d%i==0)
+                {
+                    k++;
+                }
             }
-            n=n/10;
-            c++;
-        }
-        if(c==cc)
-        {
-            printf("Mega Prime");
-        }
-        else
-        {
-            printf("Not Mega Prime");
+            if(k==2){
+                s++;
+            }
         }
     }
-    else
+    if(s==l&&c==2)
+    {
+        printf("Mega Prime");
+    }
+    else if(l!=s||c>2)
     {
         printf("Not Mega Prime");
     }
