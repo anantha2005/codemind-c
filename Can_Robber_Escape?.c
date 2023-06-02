@@ -1,25 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],n,o=0,e=0,i;
+    int n,i,c=0;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
+    int a[n];
+    for(i=1;i<=n;i++)
     {
         scanf("%d",&a[i]);
     }
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
-        if(a[i]%2!=0)
+        if(a[i]%2==1)
         {
-            o+=1;
-        }
+            c++;
+            }
     }
-    if(o<=2)
+    if(c<=2)
     {
         printf("YES");
     }
     else
-    {
-        printf("NO");
-    }
+    printf("NO");
 }
